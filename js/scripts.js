@@ -1,0 +1,37 @@
+window.addEventListener("load", function(){
+
+  function deckBuild(event) {
+    event.preventDefault();
+
+    const cardSuits = ["clubs", "diamonds", "spades", "hearts"];
+    const cardNames = ["ace",2,3,4,5,6,7,8,9,10,"jack","queen","king"]; 
+    let deckStepOne = [];
+    let deckStepTwo = []; 
+    let deckStepThree = []; 
+    let comboNameAndSuit = []; 
+
+    deckStepThree.forEach(function(suit){
+      deckStepTwo = cardSuits.forEach(function(name){
+        deckStepOne = cardNames.forEach(function() {
+          comboNameAndSuit = (name + " of " + suit);
+        })
+      })
+      console.log(comboNameAndSuit); 
+    })
+
+
+  }
+
+});
+
+
+// 4 suits, 13 ranks
+// [start position, count until x position, count up by 1]
+
+let suits = ["hearts","clubs","diamonds","spades"];
+let ranks = ['ace','2','3','4','5','6','7','8','9','10','jack','queen','king'];
+for(let suitCounter = 0; suitCounter < 4; suitCounter++) {
+  for(let rankCounter = 0; rankCounter < 13; rankCounter++) {
+  console.log(ranks[rankCounter] + ' of ' + suits[suitCounter]);
+  }
+}
